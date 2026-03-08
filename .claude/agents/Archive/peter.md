@@ -1,5 +1,7 @@
 ---
 name: peter
+version: "1.0 (archived)"
+updated: "2026-03-08"
 description: "Full Stack Engineer (Backend + Infrastructure Lead). Use PROACTIVELY for: Python/FastAPI backend implementation, database setup, Docker/K8s infrastructure, MES/ERP/IoT integration, cloud deployment, AI/ML model training pipelines. Always pairs with Sam - Peter leads backend/infra while Sam leads frontend/architecture. Use for backend implementation AND infrastructure tasks."
 tools: Read, Write, Glob, Grep, Bash
 model: sonnet

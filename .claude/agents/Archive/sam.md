@@ -1,5 +1,7 @@
 ---
 name: sam
+version: "1.0 (archived)"
+updated: "2026-03-08"
 description: "Full Stack Engineer (Architecture + Frontend Lead). Use PROACTIVELY for: SW architecture design, system design, API spec, DB schema, React/Next.js frontend, Node.js backend, AI/ML model design. Always pairs with Peter for implementation - Sam leads frontend and architecture, Peter leads backend. Use for planning phases AND frontend/AI implementation."
 tools: Read, Write, Glob, Grep, Bash, WebSearch, WebFetch
 model: opus
