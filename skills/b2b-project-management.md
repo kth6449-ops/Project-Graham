@@ -9,37 +9,7 @@
 
 ## 1. 표준별 핵심 개념 요약
 
-### 1-1. IATF 16949 (자동차 품질경영시스템)
-
-```
-핵심 요구사항:
-├── APQP (Advanced Product Quality Planning)  ← 제품 개발 전 품질 기획
-├── PPAP (Production Part Approval Process)   ← 양산 부품 승인
-├── FMEA (Failure Mode & Effects Analysis)    ← 잠재 고장 분석
-├── Control Plan                               ← 공정 관리 계획서
-├── MSA (Measurement System Analysis)         ← 측정시스템 분석
-└── SPC (Statistical Process Control)         ← 통계적 공정 관리
-```
-
-**APQP 5단계 + PPAP 연계:**
-```
-Phase 1: 계획 및 정의 (Plan & Define)
-  → 고객 요구사항, VOC, 설계목표, 예비 BOM/공정흐름도
-
-Phase 2: 제품 설계 및 개발 (Product Design & Dev)
-  → DFMEA, 설계검증계획(DVP&R), 도면/사양서, 시제품
-
-Phase 3: 공정 설계 및 개발 (Process Design & Dev)
-  → PFMEA, Control Plan, 공정흐름도, MSA 계획
-
-Phase 4: 제품 및 공정 유효성 확인 (Product & Process Validation)
-  → 시생산(Trial Run), SPC, MSA, PPAP 제출
-
-Phase 5: 피드백, 평가 및 시정조치 (Launch & Feedback)
-  → 양산 이관, 고객 피드백, 지속개선 (Kaizen)
-```
-
-### 1-2. PMBOK 7th (프로젝트 관리 지식체계)
+PMBOK 7th (프로젝트 관리 지식체계)
 
 **12가지 원칙 (PMBOK 7th):**
 1. 스튜어드십 (Stewardship)
@@ -69,46 +39,6 @@ PMBOK_DOMAINS = {
 }
 ```
 
-### 1-3. ASPICE (Automotive SPICE) — Optional
-
-```
-Process Areas (PA) 핵심:
-├── SWE.1: 소프트웨어 요구사항 분석
-├── SWE.2: 소프트웨어 아키텍처 설계
-├── SWE.3: 소프트웨어 상세 설계 및 구현
-├── SWE.4: 소프트웨어 단위 검증
-├── SWE.5: 소프트웨어 통합 및 통합 테스트
-├── SWE.6: 소프트웨어 적격성 테스트
-├── MAN.3: 프로젝트 관리
-└── SUP.1: 품질 보증
-
-Capability Levels:
-  0: Incomplete → 1: Performed → 2: Managed → 
-  3: Established → 4: Predictable → 5: Optimizing
-
-BESOLT 목표: Level 2 (Managed) — 계획되고 추적되는 프로세스
-```
-
-### 1-4. VDA 6.3 (프로세스 심사)
-
-```
-심사 영역 (P1~P7):
-P1: 잠재적 분석 (사전 심사)
-P2: 프로젝트 관리
-P3: 제품/공정 개발 기획
-P4: 공급업체 관리
-P5: 입고자재 관리 / 창고
-P6: 생산 공정 분석
-P7: 고객 관리 (납품 및 서비스)
-
-VDA 점수 체계:
-  A (≥90%): 적합
-  B (80~89%): 조건부 적합 (개선계획 필요)
-  C (<80%): 부적합 (즉시 조치 필요)
-```
-
----
-
 ## 2. BESOLT B2B 프로젝트 관리 프로세스
 
 ### 2-1. 통합 프로젝트 생명주기 (Hybrid: Waterfall Gate + Agile Sprint)
@@ -134,7 +64,7 @@ VDA 점수 체계:
 │  - WBS 작성, 마일스톤 정의                            │
 │  - 리스크 등록부 (Risk Register) 작성                │
 │  - 이해관계자 등록부 작성                             │
-│  - APQP Phase 1 병행 (품질 기획)                     │
+│  - Phase 1 병행 (품질 기획)                          │
 │  Gate 2: Graham + 고객 킥오프 승인                   │
 └─────────────────────────────────────────────────────┘
          ↓
@@ -142,7 +72,8 @@ VDA 점수 체계:
 │  PHASE 3~4: 실행 (Execution) — Agile 1주 스프린트   │
 │  - Sam+Peter Pair 개발                               │
 │  - 스프린트 리뷰: Graham + 고객 데모                 │
-│  - FMEA, Control Plan 병행 작성                      │
+│  - 품질 검증 계획 수립(시나리오, 테스트 케이스)        │
+│  - 요구사항, 설계, 검증계획 기반 제품 검증             │
 │  - Tank QA 매 스프린트 종료 시                       │
 │  Gate 3: 중간 인도물 승인 (고객)                     │
 └─────────────────────────────────────────────────────┘
@@ -150,7 +81,6 @@ VDA 점수 체계:
 ┌─────────────────────────────────────────────────────┐
 │  PHASE 5: 검증 및 인도 (Validation & Delivery)       │
 │  - UAT (User Acceptance Test) — 고객 주도            │
-│  - PPAP 준비 (해당 시)                               │
 │  - 인수인계 문서 패키지 작성                          │
 │  Gate 4: Graham + 고객 최종 승인 → 납품              │
 └─────────────────────────────────────────────────────┘
@@ -301,13 +231,12 @@ B2B_PROJECT_KPIS = {
 | 기획 | 프로젝트 헌장 | PMBOK | Graham |
 | 기획 | WBS + 마일스톤 | PMBOK | Sam |
 | 기획 | 리스크 등록부 | PMBOK | Sam |
-| 기획 | APQP Phase 1 체크리스트 | IATF 16949 | Sam |
-| 설계 | DFMEA / PFMEA | IATF 16949 | Sam+Peter |
-| 설계 | Control Plan | IATF 16949 | Peter |
-| 개발 | SW 요구사항 명세서 | ASPICE SWE.1 | Sam |
-| 개발 | 아키텍처 설계서 | ASPICE SWE.2 | Sam |
-| 검증 | 테스트 계획서 | ASPICE SWE.4~6 | Tank |
-| 검증 | QA 보고서 | IATF 16949 | Tank |
+| 설계 | 제품 아키텍처, 상세 설계 | Sam+Peter |
+| 설계 | FMEA | Peter |
+| 개발 | SW 요구사항 명세서 | SPICE SWE.1 | Sam |
+| 개발 | 아키텍처 설계서 | SPICE SWE.2 | Sam |
+| 검증 | 테스트 계획서 | SPICE SWE.4~6 | Tank |
+| 검증 | QA 보고서 | Tank |
 | 인도 | 인수인계 패키지 | PMBOK | Graham |
 | 인도 | Lessons Learned | PMBOK | 전체 |
 
