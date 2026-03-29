@@ -1,5 +1,5 @@
 # B2B Project Management Workflow Skill — BESOLT
-## 근거 표준: IATF 16949 / PMBOK 7th / ASPICE (Optional) / VDA 6.3
+## 근거 표준: PMBOK 7th, (참고 표준: APQP, IATF16949, VDA, Automotive SPICE)
 
 ## 적용 범위
 제조업 B2B 프로젝트 기획, 실행, 품질 프로세스 수립.
@@ -129,7 +129,6 @@ PMBOK_DOMAINS = {
   5.1 고객 환경 배포
   5.2 사용자 교육
   5.3 인수인계 문서
-  5.4 Go-Live 지원
 
 ## 6.0 사후 지원
   6.1 하자보수 대응
